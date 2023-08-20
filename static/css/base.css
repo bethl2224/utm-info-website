@@ -1,0 +1,113 @@
+
+/*add transition to pages*/
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.page {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(/static/img/b1.jpeg);
+    background-size:cover;
+}
+
+/* Style the button with your preferred appearance */
+h1{
+    font-family: 'Raleway', sans-serif;
+}
+.button-stack{
+
+    position:relative;
+    background-color: azure;
+    display: flex;
+    justify-content:right;
+    width: 100%;
+    padding-top:15px;
+    padding-bottom: 15px;
+   
+    margin-right:20%;
+
+
+
+}
+
+
+.button-stack button, .category-bar button{
+
+    /*add spacing between button*/
+    size:100px;
+    margin-right: 30px;
+    
+    background-color: #74b8e8;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+
+}
+
+
+
+.button-stack a:hover, .category-bar button:hover{
+    background-color: aliceblue;
+    transition: all 0.75s;
+
+}
+
+.button-stack a:active, .category-bar button:hover {
+    background-color: deepskyblue;
+    
+}
+
+
+

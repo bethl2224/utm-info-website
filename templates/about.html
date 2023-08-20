@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+<h1>about</h1>
+
+{% endblock %}
+
+{% block body %}
+<div class = "info">
+<img class="about-me-img" src="/static/img/selfie.jpeg", alt="not found" />
+<p class = "intro">Hello! My name is Bethany 😃 and I am a second year Computer Science student at UTM. I am passionate about programming and interested in web & app development.
+</br>I am also interested in baking! My specialty is bread 🍞
+</br>
+I hope this website can help you learn more about Computer Science program at UTM 💕! See you around!
+</p>
+</div>
+
+
+<ul class = "recipe-scroll-view">
+    <a href = "">food i made</a>
+
+
+
+
+</ul>
+
+
+
+
+
+{% endblock %}

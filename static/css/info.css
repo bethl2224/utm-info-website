@@ -1,0 +1,90 @@
+body {
+  .all-course-content, .search-result {
+    position: relative;
+    display: grid;
+    /*make sure the grid only repeat three for each column*/
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5%;
+    gap: 10px;
+  }
+
+  .search-bar input[type="text"] {
+    margin: 2%;
+    width: 20%;
+    grid-row-start: 0;
+    font-family: Raleway, Helvetica, sans-serif;
+    font-size: large;
+    background: #f9f9f9;
+    padding: 0 1.6rem;
+    border-radius: 5%;
+  }
+
+  .search-bar .search {
+    font-family: Raleway, Helvetica, sans-serif;
+    background-color: none;
+  }
+
+  .search-bar .search:hover {
+    transition: all 0.75s;
+  }
+
+  .course-card {
+    position: relative;
+    background-image: url("/static/img/course-background.jpeg");
+    background-size: cover;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 5%;
+    width: 600px;
+    height: 600px;
+  }
+  .course-card p {
+    padding: 5% 10%;
+  }
+
+  .course-card .description {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    padding-left: 5%;
+    display: inline-block;
+  }
+
+  .course-card a {
+    color: black;
+    padding-left: 5%;
+  }
+
+  .title {
+    background-color: #7997a1;
+    height: 100px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .material-icons {
+    top: 5%;
+    display: inline-block;
+  }
+
+  .course-btn {
+    font-family: "Raleway", sans-serif;
+    size: 10%;
+    height: 5%;
+  }
+
+  .course-btn:hover {
+    color: grey;
+  }
+
+  .hidden {
+    display: none;
+  }
+}

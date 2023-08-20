@@ -1,0 +1,488 @@
+{% extends 'base.html' %}
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="{{ url_for('static', filename='css/info.css') }}" rel="stylesheet"/>
+<h1>
+ More Information
+</h1>
+<!-- icon sheet upload-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+<div class="search-bar">
+ <!--make sure add form method in the request body-->
+ <form method="POST">
+  <input name="search_query" placeholder="Enter course name" type="text"/>
+  <button class="search">
+   Search
+  </button>
+  <p>
+   search bar add here
+  </p>
+ </form>
+</div>
+<div class="category-bar">
+ <ul>
+  <button class="first">
+   First year
+  </button>
+  <button class="second">
+   Second year
+  </button>
+  <button class="third">
+   Third year
+  </button>
+  <button class="fourth">
+   Fourth year
+  </button>
+ </ul>
+</div>
+<!--where we dynamically control the visibiilty of the class-->
+<section class="search-result {% if search_visibility %}search-result {%else%}search-result hidden {% endif %}">
+ <div class="course-card">
+  <h2 class="title">
+   MAT102H5 • Introduction to Mathematical Proofs
+   <span class="material-icons">
+    function
+   </span>
+  </h2>
+  <p class="description">
+   Understanding, using and developing precise expressions of mathematical ideas, including definitions and theorems. Set theory, logical statements and proofs, induction, topics chosen from combinatorics, elementary number theory, Euclidean geometry.
+  </p>
+  <p class="pre-requisite">
+   Minimum 70% in Grade 12 Advanced Functions (MHF4U
+  </p>
+  <a class="link-for-more" href="https://www.youtube.com/@liyinghe35">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT135H5 • Differential Calculus
+   <span class="material-icons">
+    calculate
+   </span>
+  </h2>
+  <p class="description">
+   Review of functions and their graphs, trigonometry, exponentials and logarithms. Limits and continuity of functions of a single variable. Derivatives and differentiation techniques. Applications of differentiation, including extreme values, related rates and optimization. A wide range of applications from the sciences will be discussed.
+  </p>
+  <p class="pre-requisite">
+   Minimum 70% in Grade 12 Advanced Functions (MHF4U)
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/mat135h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT136H5 • Integral Calculus
+   <span class="material-icons">
+    calculate
+   </span>
+  </h2>
+  <p class="description">
+   Continuation of MAT135H5. Antiderivatives and indefinite integrals in one variable, definite integrals and the fundamental theorem of calculus. Integration techniques and applications of integration. Infinite sequences, series and convergence tests. Power series, Taylor and Maclaurin series. A wide range of applications from the sciences will be discussed.
+  </p>
+  <p class="pre-requisite">
+   MAT132H5 or MAT135H5 or MAT137H5 or MAT157H5 or MAT135H1 or MATA29H3 or MATA30H3 or MATA31H
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/mat136h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT223H5 • Linear Algebra I
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Systems of linear equations, matrix algebra, determinants. Vector geometry in R2 and R3. Complex numbers. Rn: subspaces, linear independence, bases, dimension, column spaces, null spaces, rank and dimension formula. Orthogonality, orthonormal sets, Gram-Schmidt orthogonalization process, least square approximation. Linear transformations from Rn to Rm. The determinant, classical adjoint, Cramer's rule. Eigenvalues, eigenvectors, eigenspaces, diagonalization. Function spaces and applications to a system of linear differential equations. The real and complex number fields.
+  </p>
+  <p class="pre-requisite">
+   Grade 12 Advanced Functions (MHF4U) and Grade 12 Calculus and Vectors (MCV4U or MAT102H5)
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/mat223h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT232H5 • Calculus of Several Variables
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Differential and integral calculus of several variables: partial differentiation, chain rule, extremal problems, Lagrange multipliers, classification of critical points. Multiple integrals, Green's theorem and related topics.
+  </p>
+  <p class="pre-requisite">
+   MAT134H5 or MAT134Y5 or MAT135Y5 or MAT136H5 or MAT137Y5 or MAT139H5 or MAT157Y5 or MAT159H
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/mat232h5">
+   Link for more
+  </a>
+ </div>
+</section>
+<!--all search result-->
+<section class="all-course-content {% if search_visibility %}all-course-content hidden{%else%}all-course-content{% endif %}">
+ <!-- ADDING course content -->
+ <div class="course-card">
+  <h2 class="title">
+   CSC108H5 • Introduction to Computer Programming
+   <span class="material-icons">
+    computer
+   </span>
+  </h2>
+  <p class="description">
+   Structure of computers; the computing environment. Programming in a language such as Python. Program structure: elementary data types, statements, control flow, functions, classes, objects, methods, fields. List: searching, sorting and complexity.
+  </p>
+  <p class="pre-requisite">
+   Grade 12 Advanced Functions (MHF4U)
+  </p>
+  <a class="link-for-more" href="https://www.cs.toronto.edu/~quellan/courses/csc108/lectures.shtml">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC148H5 • Introduction to Computer Science
+   <span class="material-icons">
+    code
+   </span>
+  </h2>
+  <p class="description">
+   Abstract data types and data structures for implementing them. Linked data structures. Encapsulation and information-hiding. Object-oriented programming. Specifications. Analyzing the efficiency of programs. Recursion. This course assumes programming experience in a language such as Python, C++, or Java, as provided by CSC108H5. Students who already have this background may consult the Computer Science faculty advisor for advice about skipping CSC108H5.
+  </p>
+  <p class="pre-requisite">
+   CSC108H
+  </p>
+  <a class="link-for-more" href="https://github.com/WeiCUI6/CSC148-2018-Winter">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT102H5 • Introduction to Mathematical Proofs
+   <span class="material-icons">
+    function
+   </span>
+  </h2>
+  <p class="description">
+   Understanding, using and developing precise expressions of mathematical ideas, including definitions and theorems. Set theory, logical statements and proofs, induction, topics chosen from combinatorics, elementary number theory, Euclidean geometry.
+  </p>
+  <p class="pre-requisite">
+   Minimum 70% in Grade 12 Advanced Functions (MHF4U
+  </p>
+  <a class="link-for-more" href="https://www.youtube.com/@liyinghe35">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   ISP100H5 • Writing for University and Beyond
+   <span class="material-icons">
+    edit
+   </span>
+  </h2>
+  <p class="description">
+   This course teaches writing- and reading-related skills that are necessary for success in the transition to university work. The course uses a ‘Writing About Writing’ approach to help students understand the writing process, with an emphasis on the concepts of discourse communities, genre, rhetoric, argument, and audience. Rather than focusing on discipline-specific writing skills, the course helps students develop transferable writing skills. ISP100H5 is delivered from the perspective that all writers can improve their writing, so that students with diverse writing skills will benefit by taking it. There is a required writing assessment in the first week of classes, and students must pass the threshold mark to continue in the course. Those below the threshold should enrol in ISP010H5, Basics of Writing in English.
+  </p>
+  <p class="pre-requisite">
+  </p>
+  <a class="link-for-more" href="https://www.utm.utoronto.ca/isup/our-courses/isp100-writing-university-and-beyond">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT135H5 • Differential Calculus
+   <span class="material-icons">
+    calculate
+   </span>
+  </h2>
+  <p class="description">
+   Review of functions and their graphs, trigonometry, exponentials and logarithms. Limits and continuity of functions of a single variable. Derivatives and differentiation techniques. Applications of differentiation, including extreme values, related rates and optimization. A wide range of applications from the sciences will be discussed.
+  </p>
+  <p class="pre-requisite">
+   Minimum 70% in Grade 12 Advanced Functions (MHF4U)
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/mat135h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT136H5 • Integral Calculus
+   <span class="material-icons">
+    calculate
+   </span>
+  </h2>
+  <p class="description">
+   Continuation of MAT135H5. Antiderivatives and indefinite integrals in one variable, definite integrals and the fundamental theorem of calculus. Integration techniques and applications of integration. Infinite sequences, series and convergence tests. Power series, Taylor and Maclaurin series. A wide range of applications from the sciences will be discussed.
+  </p>
+  <p class="pre-requisite">
+   MAT132H5 or MAT135H5 or MAT137H5 or MAT157H5 or MAT135H1 or MATA29H3 or MATA30H3 or MATA31H
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/mat136h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC207H5 • Software Design
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   An introduction to software design and development concepts, methods, and tools using a statically-typed object-oriented programming language such as Java. Topics from: version control, build management, unit testing, refactoring, object-oriented design and development, design patterns, advanced IDE usage, regular expressions, and reflection. Representation of floating-point numbers and introduction to numerical computation.
+  </p>
+  <p class="pre-requisite">
+   60% in CSC148H5 (Only CSC148H5 taken at the UTM campus will be accepted.
+  </p>
+  <a class="link-for-more" href="https://mcs.utm.utoronto.ca/~207/lectures.html">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC236H5 • Introduction to the Theory of Computation
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Mathematical induction; correctness proofs for iterative and recursive algorithms; recurrence equations and their solutions (including the "Master Theorem"); introduction to automata and formal languages.
+  </p>
+  <p class="pre-requisite">
+   CSC148H5 and MAT102H
+  </p>
+  <a class="link-for-more" href="https://www.cs.toronto.edu/~colin/236/W20/lectures_and_tutorials/">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC209H5 • Software Tools and Systems Programming
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Software tools and development in a Unix/Linux environment, using a machine-oriented programming language (typically C). Core topics: software tools (shell utilities and make), processes and program execution, the memory model, system calls, file processing, interprocess communication (pipes and signals), and an introduction to concurrency, including multithreading.
+  </p>
+  <p class="pre-requisite">
+   CSC207H
+  </p>
+  <a class="link-for-more" href="https://github.com/rhubarbwu/csc209/tree/master/lectures/lec01">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC258H5 • Computer Organization
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   An introduction to computer organization and architecture, using a common CPU architecture. Core topics: data representations and computer arithmetic, processor organization, the memory hierarchy and caching, instruction set and addressing modes, and quantitative performance evaluation of computing systems. Students will program in assembly and will evaluate simulated processor architectures.
+  </p>
+  <p class="pre-requisite">
+   CSC148H
+  </p>
+  <a class="link-for-more" href="https://www.cs.utoronto.ca/~sengels/csc258/lectures.shtml">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC263H5 • Data Structures and Analysis
+   <span class="material-icons">
+    account_tree
+   </span>
+  </h2>
+  <p class="description">
+   Algorithm analysis: worst-case, average-case, and amortized complexity. Standard abstract data types, such as graphs, dictionaries, priority queues and disjoint sets. A variety of data structures for implementing these abstract data types, such as balanced search trees, hashing, heaps and disjoint forests. Design, implementation and comparison of data structures. Introduction to lower bounds.
+  </p>
+  <p class="pre-requisite">
+   CSC207H5 and CSC236H5 and (STA107H5 or STA246H5 or STA256H5 or ECO227Y5
+  </p>
+  <a class="link-for-more" href="https://github.com/cristynhoward/csc263">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT223H5 • Linear Algebra I
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Systems of linear equations, matrix algebra, determinants. Vector geometry in R2 and R3. Complex numbers. Rn: subspaces, linear independence, bases, dimension, column spaces, null spaces, rank and dimension formula. Orthogonality, orthonormal sets, Gram-Schmidt orthogonalization process, least square approximation. Linear transformations from Rn to Rm. The determinant, classical adjoint, Cramer's rule. Eigenvalues, eigenvectors, eigenspaces, diagonalization. Function spaces and applications to a system of linear differential equations. The real and complex number fields.
+  </p>
+  <p class="pre-requisite">
+   Grade 12 Advanced Functions (MHF4U) and Grade 12 Calculus and Vectors (MCV4U or MAT102H5)
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/mat223h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   MAT232H5 • Calculus of Several Variables
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Differential and integral calculus of several variables: partial differentiation, chain rule, extremal problems, Lagrange multipliers, classification of critical points. Multiple integrals, Green's theorem and related topics.
+  </p>
+  <p class="pre-requisite">
+   MAT134H5 or MAT134Y5 or MAT135Y5 or MAT136H5 or MAT137Y5 or MAT139H5 or MAT157Y5 or MAT159H
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/mat232h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   STA256H5 • Probability and Statistics I
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   This course covers probability including its role in statistical modeling. Topics include probability distributions, expectation, discrete and continuous random variables and vectors, distribution functions, distributions of functions of random variables, limit theorems, the central limit theorem.
+  </p>
+  <p class="pre-requisite">
+   MAT134H5 or MAT134Y5 or MAT135Y5 or MAT136H5 or MAT137Y5 or MAT139H5 or MAT157Y5 or MAT159H5 or a minimum 65% in MAT133Y
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/sta256h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   STA107H5 • An Introduction to Probability and Modelling
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Introduction to the theory of probability, with emphasis on the construction of discrete probability models for applications. After this course, students are expected to understand the concept of randomness and aspects of its mathematical representation. Topics include random variables, Venn diagrams, discrete probability distributions, expectation and variance, independence, conditional probability, applications such as queues.
+  </p>
+  <p class="pre-requisite">
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/sta107h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC311H5 • Introduction to Machine Learning
+   <span class="material-icons">
+    smart_toy
+   </span>
+  </h2>
+  <p class="description">
+   An introduction to methods for automated learning of relationships on the basis of empirical data. Classification and regression using nearest neighbour methods, decision trees, linear models, and neural networks. Clustering algorithms. Problems of overfitting and of assessing accuracy. Basics of reinforcement learning.
+  </p>
+  <p class="pre-requisite">
+   CSC207H5 and (MAT223H5 or MAT240H5) and MAT232H5 and (STA246H5 or STA256H5
+  </p>
+  <a class="link-for-more" href="https://www.cs.toronto.edu/~rgrosse/courses/csc311_f21/">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC343H5 • Introduction to Databases
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Introduction to database management systems. The relational data model. Relational algebra. Querying and updating databases: the query language SQL. Application programming with SQL. Integrity constraints, normal forms, and database design. Elements of database system technology: query processing, transaction management.
+  </p>
+  <p class="pre-requisite">
+   CSC263H
+  </p>
+  <a class="link-for-more" href="https://gdancik.github.io/CSC-343/notes/">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC369H5 • Operating Systems
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Principles of operating systems. The operating system as a control program and as a resource allocator. Core topics: processes and threads, concurrency (synchronization, mutual exclusion, deadlock), processor, scheduling, memory management, file systems, and protection.
+  </p>
+  <p class="pre-requisite">
+   CSC258H5 and CSC209H
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/csc369h5">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC373H5 • Algorithm Design and Analysis
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Standard algorithm design techniques: divide-and-conquer, greedy strategies, dynamic programming, linear programming, randomization, network flows, approximation algorithms and others (if time permits). Students will be expected to show good design principles and adequate skills at reasoning about the correctness and complexity of algorithms.
+  </p>
+  <p class="pre-requisite">
+   CSC263H
+  </p>
+  <a class="link-for-more" href="https://www.cs.toronto.edu/~milad/csc373/lectures.shtml">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC358H5 • Principles of Computer Networks
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Introduction to computer networks and systems programming of networks. Basic understanding of computer networks and network protocols. Network hardware and software, routing, addressing, congestion control, reliable data transfer, and socket programming.
+  </p>
+  <p class="pre-requisite">
+   CSC209H5 and CSC258H5 and CSC263H
+  </p>
+  <a class="link-for-more" href="https://mcs.utm.utoronto.ca/~358/">
+   Link for more
+  </a>
+ </div>
+ <div class="course-card">
+  <h2 class="title">
+   CSC458H5 • Computer Networks
+   <span class="material-icons">
+    developer_mode
+   </span>
+  </h2>
+  <p class="description">
+   Computer networks with an emphasis on systems programming of real networks and applications. Computer network architectures, protocol layers, network programming, and performance analysis. Transmission media, encoding systems, switching, multiple access arbitration. Network routing, congestion control, flow control. Transport protocols, real-time, multicast, social networks.
+  </p>
+  <p class="pre-requisite">
+   CSC209H5 and CSC258H5 and CSC263H
+  </p>
+  <a class="link-for-more" href="https://utm.calendar.utoronto.ca/course/csc458h5">
+   Link for more
+  </a>
+ </div>
+</section>
+{% endblock %}

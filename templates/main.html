@@ -1,0 +1,85 @@
+ {% extends 'base.html' %}
+{% block head %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> 
+
+<h1>Welcome to UTM!</h1>{% endblock %}
+
+{% block body %}
+
+<div class="all-info">
+
+<div class = "info-page">
+        <a class = "hover-img" href ="https://www.youtube.com/@UTMRegistrar">
+        <img class="about-me-img" src="/static/img/utm-school.jpeg" , alt="not found" /img>
+        </a>
+
+        <div class = "intro-sheet" >
+        <p > The University of Toronto Mississauga is a place </br> where talent and ideas converge to meet global challenges.</br>
+        
+        We pursue excellence, inspire creativity, </br>
+        develop talent, and prepare our graduates to become the next global</br>innovation
+        leaders.
+        </p>
+
+        <a href="{{ url_for('about') }}">Learn more about campus resources</a>
+        </div>
+        
+</div>
+
+<div class="info-page">
+        <a class = "hover-img" href="https://www.youtube.com/@UTMResidence">
+        <img class="about-me-img" src="/static/img/utm-library.jpeg" , alt="not found" /img>
+        </a>
+
+        <div class="intro-sheet">
+                <p > The University of Toronto Mississauga is a place </br> where talent and
+                        ideas converge to meet global challenges.</br>
+
+                        We pursue excellence, inspire creativity, </br>
+                        develop talent, and prepare our graduates to become the next global</br>innovation
+                        leaders.
+                </p>
+
+                <a href="{{ url_for('info') }}">Learn more about campus
+                                resources</a>
+        </div>
+
+</div>
+
+<div class="info-page">
+<a class = "hover-img" href = "https://www.youtube.com/watch?v=a--IMl4Bl-Q">
+<img class="about-me-img" src="/static/img/utm-nature.jpeg" , alt="not found" /img>
+</a>
+
+<div class="intro-sheet">
+        <p > The University of Toronto Mississauga is a place </br> where talent and
+                ideas converge to meet global challenges.</br>
+
+                We pursue excellence, inspire creativity, </br>
+                develop talent, and prepare our graduates to become the next global</br>innovation
+                leaders.
+        </p>
+
+        <a href="{{ url_for('about') }}">
+                Explore UTM nature</a>
+</div>
+
+</div>
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
